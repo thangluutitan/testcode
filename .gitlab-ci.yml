@@ -1,0 +1,33 @@
+# This file is a template, and might need editing before it works on your project.
+# Select image from https://hub.docker.com/_/php/
+image: node:7.10
+
+stages:
+  - build_dist
+
+# Select what we should cache between builds
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+
+# services:
+#   - mysql:5.7
+
+#Todo: only trigger this on release/tags
+build_dist:
+  stage: build_dist
+  artifacts:
+    name: $CI_COMMIT_SHA-$CI_COMMIT_REF_SLUG
+    paths:
+    - "./"
+    expire_in: 3 days
+
+  script:
+  - npm install -g yarn
+  - yarn install --production
+  # - node_modules/.bin/gulp build-dist
+  - rm -rf docker
+  - rm -rf src/client
+  - rm -rf .git

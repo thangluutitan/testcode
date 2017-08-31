@@ -1,0 +1,53 @@
+version: '2'
+services:
+  mongodb:
+    image: bitnami/mongodb:3.4.4-r6
+    environment:
+      - MONGODB_ROOT_PASSWORD=root_password
+      - MONGODB_USERNAME=staff
+      - MONGODB_PASSWORD=password
+      - MONGODB_DATABASE=frogchat
+    ports:
+      - "27017:27017"
+    volumes:
+    #Needed so mongodb persists data
+      - ./docker/mongo/data_mount:/data/db
+  redis_host:
+    image: bitnami/redis:latest
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=123456
+
+  nodejs:
+    depends_on:
+      - mongodb
+      - redis_host
+    links:
+      - mongodb
+      - redis_host
+    build:
+      context: ./
+      dockerfile: docker/node/Dockerfile
+    tty: true
+    ports:
+      - "5000:8081"
+    environment:
+      MONGO_HOST: mongodb
+      MONGO_USERNAME: staff
+      MONGO_PASSWORD: password
+      REDIS_HOST: redis_host
+      REDIS_PASSWORD: 123456
+    command: node src/server/main.js
+
+  nginx:
+    depends_on:
+      - nodejs
+    links:
+      - nodejs
+    build:
+      context: ./
+      dockerfile: docker/nginx/Dockerfile
+    tty: true
+    ports:
+      - "8011:80"

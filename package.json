@@ -1,0 +1,118 @@
+{
+  "name": "spika",
+  "version": "0.4.1",
+  "author": {
+    "name": "Clover Studio Ltd"
+  },
+  "description": "Spika is opensource messenger microservice",
+  "main": "src/server/index.js",
+  "private": false,
+  "dependencies": {
+    "JSON2": "latest",
+    "async": "1.4.0",
+    "backbone": "latest",
+    "body-parser": "^1.13.1",
+    "bootstrap-sass": "^3.3.5",
+    "bowser": "1.0.0",
+    "connect": "^3.4.0",
+    "connect-busboy": "0.0.2",
+    "debug": "^3.0.1",
+    "easyimage": "2.0.3",
+    "express": "latest",
+    "fcm-node": "^1.2.0",
+    "filereader": "^0.10.3",
+    "formidable": "^1.0.17",
+    "fs": "0.0.2",
+    "fs-extra": "^0.20.1",
+    "handlebars": "^4.0.5",
+    "hbsfy": "^2.7.0",
+    "imagemagick": "^0.1.3",
+    "jquery": "^1.9.0",
+    "jquery-colorbox": "1.6.3",
+    "js-cookie": "git+https://github.com/js-cookie/js-cookie",
+    "jshint": "^2.9.1",
+    "jsonwebtoken": "^7.4.1",
+    "lodash": "latest",
+    "mime": "1.3.4",
+    "mongoose": "^4.10.2",
+    "mongoose-transaction": "0.0.3",
+    "multer": "^0.1.8",
+    "node-observer": "^0.3.2",
+    "nouislider": "^7.0.10",
+    "oniyi-vcard-parser": "^1.0.0",
+    "quickthumb": "0.0.11",
+    "redis": "^2.7.1",
+    "request": "^2.69.0",
+    "sinon": "^1.17.1",
+    "socket.io": "^1.3.5"
+  },
+  "devDependencies": {
+    "browserify": "^2.3.0",
+    "browserify-shim": "^3.8.9",
+    "chai": "^3.3.0",
+    "eslint": "^3.18.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-config-node": "^1.6.0",
+    "gulp": "^3.9.1",
+    "gulp-apidoc": "^0.1.5",
+    "gulp-copy": "latest",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exit": "0.0.2",
+    "gulp-jsdoc": "latest",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-jshint": "2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-plumber": "latest",
+    "gulp-sass": "latest",
+    "gulp-util": "latest",
+    "should": "^7.1.0",
+    "socket.io-client": "latest",
+    "supertest": "^1.1.0",
+    "vinyl-source-stream": "latest",
+    "watchify": "latest"
+  },
+  "scripts": {
+    "build-js": "browserify src/client/js/main.js > public/js/bundle.js -d",
+    "watch-js": "watchify src/client/js/main.js -o public/js/bundle.js -v -d "
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "js-cookie": {
+      "exports": "js-cookie"
+    },
+    "three": "global:THREE"
+  },
+  "apidoc": {
+    "name": "Spika",
+    "version": "2.0.0",
+    "description": "Spika Web API's reference",
+    "title": "Spika Web API",
+    "url": ""
+  },
+  "_id": "spika@2.0.0",
+  "_shasum": "7d52cb98e7fa9466be08c8e2911527994976d258",
+  "_from": "spika@0.0.1",
+  "_npmVersion": "4.0.5",
+  "_nodeVersion": "7.4.0",
+  "_npmUser": {
+    "name": "cloverstudio",
+    "email": "github@clover-studio.com"
+  },
+  "dist": {
+    "shasum": "7d52cb98e7fa9466be08c8e2911527994976d258",
+    "tarball": "http://registry.npmjs.org/spika/-/spika-0.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "cloverstudio",
+      "email": "github@clover-studio.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/spika/-/spika-0.0.1.tgz",
+  "readme": "ERROR: No README data found!"
+}

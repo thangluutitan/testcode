@@ -1,0 +1,4 @@
+node_modules/*
+*/node_modules
+docker/node
+docker/mongo
