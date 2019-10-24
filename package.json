@@ -34,7 +34,7 @@
     "jsonwebtoken": "^7.4.1",
     "lodash": "latest",
     "mime": "1.3.4",
-    "mongoose": "^4.10.2",
+    "mongoose": "^5.4.10",
     "mongoose-transaction": "0.0.3",
     "multer": "^0.1.8",
     "node-observer": "^0.3.2",
