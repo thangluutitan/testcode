@@ -9,7 +9,7 @@
   "private": false,
   "dependencies": {
     "JSON2": "latest",
-    "async": "1.4.0",
+    "async": "3.2.2",
     "backbone": "latest",
     "body-parser": "^1.13.1",
     "bootstrap-sass": "^3.3.5",
