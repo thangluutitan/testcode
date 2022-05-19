@@ -21,7 +21,7 @@
     "express": "latest",
     "fcm-node": "^1.2.0",
     "filereader": "^0.10.3",
-    "formidable": "^1.0.17",
+    "formidable": "^3.2.4",
     "fs": "0.0.2",
     "fs-extra": "^0.20.1",
     "handlebars": "^4.0.5",
