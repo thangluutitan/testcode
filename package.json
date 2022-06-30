@@ -42,7 +42,7 @@
     "oniyi-vcard-parser": "^1.0.0",
     "quickthumb": "0.0.11",
     "redis": "^2.7.1",
-    "request": "^2.69.0",
+    "request": "^2.87.0",
     "sinon": "^1.17.1",
     "socket.io": "^1.3.5"
   },
